@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 const TodoInput = (props) => {
+	// props는 객체이므로 객체 구조분해 할당한다.
 	const { textChange, timeChange, submit, handleDelete } = props;
 	return (
 		<div>
