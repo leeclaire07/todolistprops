@@ -1,35 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-
-const TodoInput = (props) => {
-	const { textChange, timeChange, submit, handleDelete } = props;
-	return (
-		<div>
-			<input type="text" name="todo" onChange={textChange}></input>
-			<input type="number" name="time" onChange={timeChange}></input>
-			<button onClick={submit}>완성</button>
-			<button onClick={handleDelete}>삭제</button>
-		</div>
-	);
-};
-
-const Card = (props) => {
-	console.log(props);
-	return (
-		<div>
-			<div>{props?.todo?.todo}</div>
-			<div>{props?.todo?.time}</div>
-
-			<button
-				type="button"
-				className="deleteButton"
-				onClick={() => props.onDelete(props?.todo?.id)}
-			>
-				x
-			</button>
-		</div>
-	);
-};
+import TodoInput from "./components/TodoInput";
+import Card from "./components/Card";
 
 function App() {
 	const [text, setText] = useState("");
